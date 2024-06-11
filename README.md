@@ -15,4 +15,5 @@
 - hydra-core=1.2.0
 
 ## Usage
-- run python -m alter
+- Run the following command to train the model
+   python -m alter model=lrbgt
