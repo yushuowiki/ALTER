@@ -13,3 +13,6 @@
 - scikit-learn=1.1.1
 - pandas=1.4.3
 - hydra-core=1.2.0
+
+## Usage
+- run python -m alter
