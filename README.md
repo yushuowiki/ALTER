@@ -15,6 +15,8 @@
 - hydra-core=1.2.0
 
 ## Usage
+
+```html
 <div>
   <input type="text" value="要复制的文本" id="copyText">
   <button onclick="copyToClipboard()">复制</button>
