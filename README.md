@@ -15,5 +15,16 @@
 - hydra-core=1.2.0
 
 ## Usage
-- Run the following command to train the model
-   'python -m alter model=lrbgt'
+<div>
+  <input type="text" value="要复制的文本" id="copyText">
+  <button onclick="copyToClipboard()">复制</button>
+</div>
+
+<script>
+  function copyToClipboard() {
+    var copyText = document.getElementById("copyText");
+    copyText.select();
+    document.execCommand("copy");
+    alert("已复制: " + copyText.value);
+  }
+</script>
