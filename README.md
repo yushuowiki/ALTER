@@ -1,7 +1,7 @@
 # ALTER
 
 ## Abstract
-![teaser](https://github.com/yewsiang/ConceptBottleneck/blob/master/figures/tti_qual_examples.png)
+![teaser](https://anonymous.4open.science/r/ALTER-72B0/figure/figure1.jpg)
 
 ## Dependencies
 - python=3.9
