@@ -14,7 +14,13 @@
 - pandas=1.4.3
 - hydra-core=1.2.0
 
+## Installation
+```html
+conda create --name alter python=3.9
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+conda install -c conda-forge wandb
+
 ## Usage
 - Run the following command to train the model.
 ```html
-python -m alter model=lrbgt 
+python -m alter model=lrbgt dataset=ABIDE
