@@ -1,7 +1,7 @@
 # ALTER
 
-## Dataset
-Download the ABIDE dataset from [here](https://github.com/Wayfear/BrainNetworkTransformer/tree/main)
+## Abstract
+![teaser](https://github.com/yewsiang/ConceptBottleneck/blob/master/figures/tti_qual_examples.png)
 
 ## Dependencies
 - python=3.9
