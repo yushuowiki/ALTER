@@ -16,4 +16,4 @@
 
 ## Usage
 - Run the following command to train the model
-   python -m alter model=lrbgt
+   'python -m alter model=lrbgt'
