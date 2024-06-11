@@ -1,7 +1,7 @@
 # ALTER
 
 ## Dataset
-Download the ABIDE dataset from ![teaser](https://github.com/Wayfear/BrainNetworkTransformer/tree/main)
+Download the ABIDE dataset from [here](https://github.com/Wayfear/BrainNetworkTransformer/tree/main)
 
 ## Dependencies
 - python=3.9
