@@ -25,7 +25,7 @@ def add_every_rrwp(data,
                   spd=False,
                   **kwargs
                   ):
-    # edge_index = torch.column_stack(torch.where(data > 0.8)).T.contiguous()
+    # edge_index = torch.column_stack(torch.where(data > 0.3)).T.contiguous()
     #
     # device = edge_index.device
     # ind_vec = torch.eye(walk_length, dtype=torch.float, device=device)
@@ -35,7 +35,7 @@ def add_every_rrwp(data,
     # adj = torch.sparse_coo_tensor(edge_index, torch.ones(edge_index.size(1), device=device), (num_nodes, num_nodes))
     # adj = adj.to_dense()
     # data = (data + 1.) / 2.
-    edge_index = torch.column_stack(torch.where(data > 0.0)).T.contiguous()
+    edge_index = torch.column_stack(torch.where(data > 0.3)).T.contiguous()
 
     device = edge_index.device
     num_nodes = data.shape[0]
