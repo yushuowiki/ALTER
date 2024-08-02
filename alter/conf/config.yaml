@@ -6,7 +6,7 @@ defaults:
   - datasz: 100p
   - preprocess: mixup
 
-repeat_time: 5
+repeat_time: 10
 log_path: result
 save_learnable_graph: False
 
