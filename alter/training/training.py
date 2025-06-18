@@ -1,11 +1,11 @@
-from source.utils import accuracy, TotalMeter, count_params, isfloat
+from .utils import accuracy, TotalMeter, count_params, isfloat
 import torch
 import numpy as np
 from pathlib import Path
 import torch.nn.functional as F
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import precision_recall_fscore_support, classification_report
-from source.utils import continus_mixup_data
+from .utils import continus_mixup_data
 import wandb
 from omegaconf import DictConfig
 from typing import List
