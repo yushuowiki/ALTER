@@ -10,7 +10,7 @@ import wandb
 from omegaconf import DictConfig
 from typing import List
 import torch.utils.data as utils
-from source.components import LRScheduler
+from .components import LRScheduler
 import logging
 
 
