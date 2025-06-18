@@ -4,7 +4,7 @@ from .FBNettraining import FBNetTrain
 from omegaconf import DictConfig
 from typing import List
 import torch
-from source.components import LRScheduler
+from .components import LRScheduler
 import logging
 import torch.utils.data as utils
 
