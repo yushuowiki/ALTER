@@ -1,16 +1,16 @@
-from .utils import accuracy, TotalMeter, count_params, isfloat
+from alter.utils import accuracy, TotalMeter, count_params, isfloat
 import torch
 import numpy as np
 from pathlib import Path
 import torch.nn.functional as F
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import precision_recall_fscore_support, classification_report
-from .utils import continus_mixup_data
+from alter.utils import continus_mixup_data
 import wandb
 from omegaconf import DictConfig
 from typing import List
 import torch.utils.data as utils
-from .components import LRScheduler
+from alter.components import LRScheduler
 import logging
 
 
