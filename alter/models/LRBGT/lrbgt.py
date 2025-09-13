@@ -19,23 +19,11 @@ def add_full_rrwp(data, walk_length):
 def add_every_rrwp(data,
 
                   walk_length=8,
-                  # attr_name_abs="rrwp",  # name: 'rrwp'
-                  # attr_name_rel="rrwp",  # name: ('rrwp_idx', 'rrwp_val')
                   add_identity=True,
                   spd=False,
                   **kwargs
                   ):
-    # edge_index = torch.column_stack(torch.where(data > 0.3)).T.contiguous()
-    #
-    # device = edge_index.device
-    # ind_vec = torch.eye(walk_length, dtype=torch.float, device=device)
-    # num_nodes = data.shape[0]
-    # edge_weight = torch.zeros((num_nodes, num_nodes), device=device)
-    # edge_weight[edge_index[0], edge_index[1]] = 1.0
-    # adj = torch.sparse_coo_tensor(edge_index, torch.ones(edge_index.size(1), device=device), (num_nodes, num_nodes))
-    # adj = adj.to_dense()
-    # data = (data + 1.) / 2.
-    edge_index = torch.column_stack(torch.where(data > 0.3)).T.contiguous()
+    edge_index = torch.column_stack(torch.where(data > 0.0)).T.contiguous()
 
     device = edge_index.device
     num_nodes = data.shape[0]
@@ -67,25 +55,6 @@ def add_every_rrwp(data,
 
     abs_pe = pe.diagonal().transpose(0, 1)  # n x k
 
-    # rel_pe = SparseTensor.from_dense(pe, has_value=True)
-
-    # rel_pe = torch.sparse_coo_tensor(pe.nonzero().t(), pe[pe.nonzero()].view(-1), pe.size())
-
-    # rel_pe_row, rel_pe_col, rel_pe_val = rel_pe.coo()
-    # rel_pe_idx = torch.stack([rel_pe_row, rel_pe_col], dim=0)
-
-    # if spd:
-    #     spd_idx = walk_length - torch.arange(walk_length)
-    #     val = (rel_pe_val > 0).type(torch.float) * spd_idx.unsqueeze(0)
-    #     val = torch.argmax(val, dim=-1)
-    #     rel_pe_val = F.one_hot(val, walk_length).type(torch.float)
-    #     abs_pe = torch.zeros_like(abs_pe)
-
-    # data = add_node_attr(data, abs_pe, attr_name=attr_name_abs)
-    # data = add_node_attr(data, rel_pe_idx, attr_name=f"{attr_name_rel}_index")
-    # data = add_node_attr(data, rel_pe_val, attr_name=f"{attr_name_rel}_val")
-    # data.log_deg = torch.log(deg + 1)
-    # data.deg = deg.type(torch.long)
 
     return abs_pe
 
@@ -238,3 +207,4 @@ class BrainNetworkTransformer(BaseModel):
             else:
                 loss_all += decs[index].loss(assignment)
         return loss_all
+
